@@ -12,3 +12,11 @@ main = hakyll $ do
         compile $ pageCompiler
             >>> applyTemplateCompiler "template.html"
             >>> relativizeUrlsCompiler
+
+    match "img/*" $ do
+        route $ idRoute
+        compile $ copyFileCompiler
+
+    match "css/*" $ do
+        route $ idRoute
+        compile $ compressCssCompiler
