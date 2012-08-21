@@ -1,7 +1,13 @@
+generate: hakyll
+	@./hakyll build
+
 hakyll: hakyll.hs
-	ghc --make hakyll
+	@ghc --make hakyll
 
 clean:
-	rm hakyll.hi hakyll.o hakyll
+	@rm -rf _cache _site
 
-.PHONY: clean
+distclean: clean
+	@rm hakyll.hi hakyll.o hakyll
+
+.PHONY: clean distclean
