@@ -7,7 +7,7 @@ main :: IO ()
 main = hakyll $ do
     match "template.html" $ compile templateCompiler
 
-    match "*.markdown" $ do
+    match "*.md" $ do
         route   $ setExtension "html"
         compile $ pageCompiler
             >>> applyTemplateCompiler "template.html"
