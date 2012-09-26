@@ -7,8 +7,10 @@ main :: IO ()
 main = hakyll $ do
     match "template.html" $ compile templateCompiler
 
-    match "*.md" $ do
-        route   $ setExtension "html"
+    match "text/*.md" $ do
+	route $ let move = gsubRoute "text/" (const "")
+                    rename = setExtension "html"
+                in composeRoutes move rename
         compile $ pageCompiler
             >>> applyTemplateCompiler "template.html"
             >>> relativizeUrlsCompiler
