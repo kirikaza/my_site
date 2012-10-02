@@ -1,0 +1,15 @@
+The files are available under several different licenses.
+
+1. All the files under the "text" directory are licensed under the
+   Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
+   which is available in the file "law/CC-BY-NC-ND-3.0-Unported.txt"
+   (also on http://creativecommons.org/licenses/by-nc-nd/3.0/legalcode).
+
+2. The three files "css/bootstrap.css", "img/glyphicons-halflings.png",
+   "img/glyphicons-halflings-white.png" are the parts of Bootstrap and they
+   are licensed under the Apache Licence 2.0 which is available in the file
+   "law/Apache-2.0.txt" (or http://www.apache.org/licenses/LICENSE-2.0.html).
+
+3. Other files are the sources and licensed under the BSD 3-Clause License
+   which is available in the file "law/BSD-3-Clause.txt".
+
