@@ -22,7 +22,7 @@ process() {
 			{
 				cd "$DIR/.." &&
 				git pull &&
-				make clean generate
+				make clean generate publish
 			} 2>&1
 		)
 		if [ $? -eq 0 ] ; then

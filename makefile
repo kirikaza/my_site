@@ -4,6 +4,9 @@ generate: hakyll
 hakyll: hakyll.hs
 	@ghc --make hakyll
 
+publish: .public generate
+	@rsync -rvc _site/ .public/
+
 clean:
 	@rm -rf _cache _site
 
