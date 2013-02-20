@@ -1,5 +1,4 @@
 {-# LANGUAGE OverloadedStrings #-}
-import Control.Arrow ((>>>))
 
 import Hakyll
 
@@ -11,9 +10,9 @@ main = hakyll $ do
 	route $ let move = gsubRoute "text/" (const "")
                     rename = setExtension "html"
                 in composeRoutes move rename
-        compile $ pageCompiler
-            >>> applyTemplateCompiler "template.html"
-            >>> relativizeUrlsCompiler
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "template.html" defaultContext
+            >>= relativizeUrls
 
     match "img/*" $ do
         route $ idRoute
