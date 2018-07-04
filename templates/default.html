@@ -3,19 +3,47 @@
     <head>
         <meta charset="utf-8" />
         <title>Also spricht Kirikaza :: $title$</title>
-        <link rel="stylesheet" type="text/css" href="/css/default.css" />
+	<link href="https://fonts.googleapis.com/css?family=PT+Serif+Caption" rel="stylesheet" />
+        <link rel="stylesheet" type="text/css" href="/styles/default.css" />
+	$if(googleAnalyticsID)$ 
+	<!-- Google Analytics [begin] -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=$googleAnalyticsID$"></script>
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag() { dataLayer.push(arguments); }
+	  gtag('js', new Date());
+	  gtag('config', '$googleAnalyticsID$');
+	</script>	
+	<!-- Google Analytics [end] -->
+	$endif$
+	$if(goSquaredID)$
+	<!-- GoSquared [begin] -->
+	<script>
+	  !function(g,s,q,r,d){r=g[r]=g[r]||function(){(r.q=r.q||[]).push(
+	  arguments)};d=s.createElement(q);q=s.getElementsByTagName(q)[0];
+	  d.src='//d1l6p2sc9645hc.cloudfront.net/tracker.js';q.parentNode.
+	  insertBefore(d,q)}(window,document,'script','_gs');
+
+	  _gs('$goSquaredID$');
+	</script>
+	<!-- GoSquared [end] -->
+	$endif$
     </head>
     <body>
         <header>
-            <a class="left-item $if(postsListPage)$ current-item $endif$" href="/">Мои статьи</a>
-            <a class="right-item $if(aboutPage)$ current-item $endif$" href="/about.html">Обо мне</a>
+            <a class="left-item $if(postsListPage)$ current-item $endif$" href="/">Also spricht Kirikaza</a>
+            <a class="right-item" href="https://vk.com/kirikaza">@vk</a>
+            <a class="right-item" href="https://facebook.com/kirikaza">@facebook</a>
+            <a class="right-item" href="https://twitter.com/kirikaza">@twitter</a>
         </header>
         <div class="content">
             $if(singlePostPage)$<h1>$title$</h1>$endif$
             $body$
         </div>
         <footer>
-            Спасибо <a href="http://jaspervdj.be/hakyll">Hakyll</a> за генерацию сайта
+	    <span class="left-item">Комментарии и предложения можно отправить в <a href="https://twitter.com/kirikaza">Twitter</a></span>
+	    
+            <span class="right-item pale">Спасибо <a href="http://jaspervdj.be/hakyll">Hakyll</a> за генерацию сайта</span>
         </footer>
     </body>
 </html>

@@ -1,0 +1,83 @@
+@font-face {
+    font-family: 'Liberation Serif';
+    src: url('liberation_serif.woff') format('woff');
+}
+@font-face {
+    font-family: 'Liberation Serif';
+    src: url('liberation_serif_italic.woff') format('woff');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Liberation Mono';
+    src: url('liberation_mono.woff') format('woff');
+}
+
+body {
+    font-family: 'Liberation Serif', serif;
+    font-size: 18px;
+    margin: 0px auto 0px auto;
+    max-width: 720px;
+}
+
+pre, code {
+    font-family: 'Liberation Mono', monospace;
+    font-size: 16px;
+}
+
+header {
+    border-bottom: 1px solid silver;
+    margin-top: 30px;
+    overflow: hidden;
+}
+header a {
+    color: royalblue;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 6px;
+    text-decoration: none;
+}
+header .current-item {
+    background-color: silver;
+    color: white;
+}
+header .right-item,
+footer .right-item {
+    float: right;
+}
+
+.content {
+    padding: 6px;
+}
+h1, h2 {
+    font-family: 'PT Serif Caption', serif;
+}
+h1 {
+    font-size: 24px;
+}
+h2 {
+    font-size: 20px;
+}
+
+p {
+    text-align: justify;
+}
+p sub {
+    font-size: 9px;
+}
+footer {
+    border-top: solid 1px silver;
+    font-size: 12px;
+    margin-bottom: 30px;
+    padding: 6px;
+}
+footer a:hover {
+    text-decoration: underline;
+}
+footer .pale {
+    color: silver;
+}
+footer .pale a {
+    text-decoration: none;
+    color: steelblue;
+}
