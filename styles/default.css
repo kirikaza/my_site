@@ -15,44 +15,63 @@
 body {
     font-family: 'Liberation Serif', serif;
     font-size: 18px;
-    margin: 0px auto 0px auto;
+    margin: 0;
+    padding: 0;
+}
+.header-content,
+.footer-content,
+.content {
     max-width: 720px;
+    margin: 0px auto;
 }
-
-pre, code {
-    font-family: 'Liberation Mono', monospace;
-    font-size: 16px;
+header,
+footer,
+.content {
+    padding: 8px;
 }
-
-pre {
-    overflow-x: scroll;
-}
-
 header {
-    border-bottom: 1px solid silver;
-    margin-top: 30px;
-    overflow: hidden;
+    background-color: #333333;
+    font-family: 'PT Serif Caption', serif;
+    font-weight: bold;
 }
 header a {
-    color: royalblue;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bold;
-    padding: 6px;
     text-decoration: none;
 }
-header .current-item {
-    background-color: silver;
-    color: white;
+header a,
+header a:visited {
+    color: #999999;
 }
-header .right-item,
-footer .right-item {
+footer {
+    background-color: #EEEEEE;
+}
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+footer .icon {
+    padding: 0 6px;
+}
+footer .icon img {
+    height: 28px;
+    vertical-align: middle;
+}
+footer .thanks {
     float: right;
+    font-size: 12px;
+    text-align: right;
+    color: #666666;
+}
+footer .thanks a {
+    text-decoration: none;
+    color: steelblue;
+}
+footer .thanks a:hover {
+    text-decoration: underline;
+}
+.content {
 }
 
-.content {
-    padding: 6px;
-}
 h1, h2 {
     font-family: 'PT Serif Caption', serif;
 }
@@ -69,19 +88,23 @@ p {
 p sub {
     font-size: 9px;
 }
-footer {
-    border-top: solid 1px silver;
-    font-size: 12px;
-    margin-bottom: 30px;
-    padding: 6px;
+p + ul {
+    margin-top: -1em;
 }
-footer a:hover {
-    text-decoration: underline;
+ul {
+    padding-left: 20px;
 }
-footer .pale {
-    color: silver;
+li {
+    margin-bottom: 3px;
 }
-footer .pale a {
-    text-decoration: none;
-    color: steelblue;
+pre, code {
+    font-family: 'Liberation Mono', monospace;
+    font-size: 16px;
+}
+pre {
+    overflow-x: auto;
+    border: solid 1px #CCCCCC;
+    border-radius: 3px;
+    background-color: #F8F8F8;
+    padding: 0 3px;
 }

@@ -32,19 +32,22 @@
     </head>
     <body>
         <header>
-            <a class="left-item $if(postsListPage)$ current-item $endif$" href="/">Also spricht Kirikaza</a>
-            <a class="right-item" href="https://vk.com/kirikaza">@vk</a>
-            <a class="right-item" href="https://facebook.com/kirikaza">@facebook</a>
-            <a class="right-item" href="https://twitter.com/kirikaza">@twitter</a>
+	    <div class="header-content">
+                <a href="/">Also spricht Kirikaza</a>
+	    </div>
         </header>
         <div class="content">
             $if(singlePostPage)$<h1>$title$</h1>$endif$
             $body$
         </div>
         <footer>
-	    <span class="left-item">Комментарии и предложения можно отправить в <a href="https://twitter.com/kirikaza">Twitter</a></span>
-	    
-            <span class="right-item pale">Спасибо <a href="http://jaspervdj.be/hakyll">Hakyll</a> за генерацию сайта</span>
+	    <div class="footer-content">
+	      <div>
+                <a class="icon" href="https://twitter.com/kirikaza"><img src="/styles/twitter.svg"/></a>
+                <a class="icon" href="https://github.com/kirikaza"><img src="/styles/github.png"/></a>
+	      </div>
+              <div class="thanks">Спасибо <a href="http://jaspervdj.be/hakyll">Hakyll</a><br/> за генерацию сайта</div>
+	    </div>
         </footer>
     </body>
 </html>
